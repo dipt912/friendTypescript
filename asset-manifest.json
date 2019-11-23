@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/robotypescript/static/css/main.3dbbd77e.chunk.css",
-    "main.js": "/robotypescript/static/js/main.062e3d0e.chunk.js",
-    "main.js.map": "/robotypescript/static/js/main.062e3d0e.chunk.js.map",
-    "runtime-main.js": "/robotypescript/static/js/runtime-main.9fb418dd.js",
-    "runtime-main.js.map": "/robotypescript/static/js/runtime-main.9fb418dd.js.map",
-    "static/css/2.eb45ad44.chunk.css": "/robotypescript/static/css/2.eb45ad44.chunk.css",
-    "static/js/2.8d4d9e42.chunk.js": "/robotypescript/static/js/2.8d4d9e42.chunk.js",
-    "static/js/2.8d4d9e42.chunk.js.map": "/robotypescript/static/js/2.8d4d9e42.chunk.js.map",
-    "index.html": "/robotypescript/index.html",
-    "precache-manifest.105dacff93a99579d2fd9d35b7561fec.js": "/robotypescript/precache-manifest.105dacff93a99579d2fd9d35b7561fec.js",
-    "service-worker.js": "/robotypescript/service-worker.js",
-    "static/css/2.eb45ad44.chunk.css.map": "/robotypescript/static/css/2.eb45ad44.chunk.css.map",
-    "static/css/main.3dbbd77e.chunk.css.map": "/robotypescript/static/css/main.3dbbd77e.chunk.css.map",
-    "static/media/App.css": "/robotypescript/static/media/SEGA.12a3db8b.woff"
+    "main.css": "/friendTypescript/static/css/main.4645732f.chunk.css",
+    "main.js": "/friendTypescript/static/js/main.2c9b2d69.chunk.js",
+    "main.js.map": "/friendTypescript/static/js/main.2c9b2d69.chunk.js.map",
+    "runtime-main.js": "/friendTypescript/static/js/runtime-main.0e97d8b8.js",
+    "runtime-main.js.map": "/friendTypescript/static/js/runtime-main.0e97d8b8.js.map",
+    "static/css/2.eb45ad44.chunk.css": "/friendTypescript/static/css/2.eb45ad44.chunk.css",
+    "static/js/2.8d4d9e42.chunk.js": "/friendTypescript/static/js/2.8d4d9e42.chunk.js",
+    "static/js/2.8d4d9e42.chunk.js.map": "/friendTypescript/static/js/2.8d4d9e42.chunk.js.map",
+    "index.html": "/friendTypescript/index.html",
+    "precache-manifest.239cc81d7abc4e9e26fd7389f6d6ae6c.js": "/friendTypescript/precache-manifest.239cc81d7abc4e9e26fd7389f6d6ae6c.js",
+    "service-worker.js": "/friendTypescript/service-worker.js",
+    "static/css/2.eb45ad44.chunk.css.map": "/friendTypescript/static/css/2.eb45ad44.chunk.css.map",
+    "static/css/main.4645732f.chunk.css.map": "/friendTypescript/static/css/main.4645732f.chunk.css.map",
+    "static/media/App.css": "/friendTypescript/static/media/SEGA.12a3db8b.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.9fb418dd.js",
+    "static/js/runtime-main.0e97d8b8.js",
     "static/css/2.eb45ad44.chunk.css",
     "static/js/2.8d4d9e42.chunk.js",
-    "static/css/main.3dbbd77e.chunk.css",
-    "static/js/main.062e3d0e.chunk.js"
+    "static/css/main.4645732f.chunk.css",
+    "static/js/main.2c9b2d69.chunk.js"
   ]
 }
