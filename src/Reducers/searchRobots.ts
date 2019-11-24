@@ -1,14 +1,18 @@
 
-import { CHANGE_SEARCH_FIELD } from '../constants';
+import { Actions, ActionTypes } from '../Actions/index.model';
 
-const intialStage = {
+
+export interface ISearchRobotsInitState {
+    searchField:string;
+  }
+const intialStage:ISearchRobotsInitState | {}  = {
     searchField : '',
 }
 
-export const searchRobots = (state=intialStage, action:any = {}) => {
+export const searchRobots = (state=intialStage, action:Actions) => {
     switch(action.type) {
-        case CHANGE_SEARCH_FIELD:
-           return { ...state, searchField : action.payload } 
+        case ActionTypes.CHANGE_SEARCH_FIELD:
+           return { ...state, searchField : action.text } 
         default:
         return state;   
     }

@@ -1,7 +1,16 @@
 
-import { FETCH_USER_SUCCESS, FETCH_USER_ERROR , FETCH_USER_PENDING } from '../constants';
+import { Actions, ActionTypes } from '../Actions/index.model';
+import { Robot } from '../Interfaces';
 
-const intialStage = {
+
+
+export interface IRequestUserIntiState {
+    robots : Robot[] ,
+    isPending: boolean,
+    error : string,
+  }
+
+const intialStage: IRequestUserIntiState | {} = {
     robots : [],
     isPending: false,
     error : '',
@@ -10,14 +19,16 @@ const intialStage = {
 
 
 
-export const requestUsers = (state = intialStage, action:any = {}) => {
+export const requestUsers = (state = intialStage , action: Actions ) => {
     switch (action.type) {
-        case FETCH_USER_SUCCESS:
-            return { ...state, robots: action.payload, isPending: false }
-        case FETCH_USER_ERROR:
+        case ActionTypes.FETCH_USER_RESULT:
+            return { ...state, robots: action.users, isPending: false }
+        case ActionTypes.FETCH_USER_SUCCESS:
+            return { ...state, isPending: false }
+        case ActionTypes.FETCH_USER_ERROR:
             return { ...state, isPending: false, error: 'Failed To fetch users' }
-        case FETCH_USER_PENDING:
-            return { ...state, isPending: true }
+        case ActionTypes.FETCH_USER_PENDING:
+            return { ...state, isPending: true };
         default:
             return state;
     }

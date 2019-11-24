@@ -30,7 +30,7 @@ class App extends Component<IAppProps, IAppState> {
 
   render() {
     const { searchfield, robots } = this.props;
-    const filteredRobots = robots.filter(robot =>{
+    const filteredRobots = robots && robots.filter(robot =>{
       return robot.name.toLowerCase().includes(searchfield.toLowerCase());
     })
     return !robots.length ?

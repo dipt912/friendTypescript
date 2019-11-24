@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
-import { setSearchField, fetchUsers } from '../../actions';
+import { setSearchField, fetchUsers } from '../../Actions/actions';
 import { Robot } from '../../Interfaces';
 import App from './App'
+import { RootState } from '../../Reducers';
 
 
 interface IStateToProps {
@@ -16,7 +17,8 @@ interface IDisptchToProps {
     onFetchUser : () => void,
   }
   
-  const mapStateToProps = (state:any):IStateToProps => {
+  const mapStateToProps = (state:RootState):IStateToProps => {
+    console.warn('state..', state)
     return {
       searchfield: state.searchRobots.searchField,
       robots : state.requestUsers.robots,
@@ -28,7 +30,7 @@ interface IDisptchToProps {
   const mapDispatchToProps = (dispatch:any):IDisptchToProps  => {
     return {
       onSearchChange : (text:string) => dispatch(setSearchField(text)),
-      onFetchUser : () => fetchUsers(dispatch),
+      onFetchUser : () => fetchUsers(),
     }
   }
   
