@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f23b5213b575a0f5353a13e4471bb59e",
+    "revision": "8b05a42934970f54c5c0a80d119138ef",
     "url": "/friendTypescript/index.html"
   },
   {
-    "revision": "515e37a8c04da7db8e2c",
+    "revision": "13590ef480f2ffde4bc8",
     "url": "/friendTypescript/static/css/2.eb45ad44.chunk.css"
   },
   {
-    "revision": "160b0cf43a93a4322832",
+    "revision": "2733e24ebc059e8ea9eb",
     "url": "/friendTypescript/static/css/main.4645732f.chunk.css"
   },
   {
-    "revision": "515e37a8c04da7db8e2c",
-    "url": "/friendTypescript/static/js/2.d535ebb6.chunk.js"
+    "revision": "13590ef480f2ffde4bc8",
+    "url": "/friendTypescript/static/js/2.c5789ece.chunk.js"
   },
   {
-    "revision": "160b0cf43a93a4322832",
-    "url": "/friendTypescript/static/js/main.c0541cf9.chunk.js"
+    "revision": "2733e24ebc059e8ea9eb",
+    "url": "/friendTypescript/static/js/main.d8842402.chunk.js"
   },
   {
     "revision": "e8430377e8557bb34258",
