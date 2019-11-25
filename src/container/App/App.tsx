@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
-import CardList from '../../components/CardList';
-import SearchBox from '../../components/SearchBox';
-import Scroll from '../../components/Scroll';
+import { Route, Switch } from 'react-router-dom'
+import { Router } from "react-router";
+// import { ConnectedRouter } from 'connected-react-router'
+
+import history from '../../lib/history';
 import './App.css';
 import { Robot } from '../../Interfaces';
+import Home from '../Home'
+import User from '../User/index';
+import NavBar from '../../components/NabBar';
 
 interface IAppProps {
-  onFetchUser:() => void,
-  onSearchChange:(val:string) => void,
-  searchfield:string,
+  onFetchUser: () => void,
+  onSearchChange: (val: string) => void,
+  searchfield: string,
   robots: Robot[],
-  isPending:boolean,
-  error:string
+  isPending: boolean,
+  error: string
 }
 
 interface IAppState {
@@ -24,26 +29,22 @@ class App extends Component<IAppProps, IAppState> {
     this.props.onFetchUser()
   }
 
-  onSearchChange = (event:any) => {
+  onSearchChange = (event: any) => {
     this.props.onSearchChange(event.target.value)
   }
 
   render() {
-    const { searchfield, robots } = this.props;
-    const filteredRobots = robots && robots.filter(robot =>{
-      return robot.name.toLowerCase().includes(searchfield.toLowerCase());
-    })
-    return !robots.length ?
-      <h1>Loading</h1> :
-      (
-        <div className='tc'>
-          <h1 className='f1'>Find Friends</h1>
-          <SearchBox searchChange={this.onSearchChange}/>
-          <Scroll>
-            <CardList robots={filteredRobots} />
-          </Scroll>
-        </div>
-      );
+    return (
+      <div className='tc'>
+        <Router history={history}>
+          <NavBar onSearchChange={this.onSearchChange} />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/user/:id" component={User} />
+          </Switch>
+        </Router>
+      </div>
+    );
   }
 }
 
