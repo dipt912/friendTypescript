@@ -3,8 +3,8 @@ import cn from 'classnames'
 import { match } from 'react-router';
 import { Robot } from '../../Interfaces';
 import styles from './style'
-import { withStyles, WithStyles, Avatar,  Icon, Grid, Container, Typography, Divider } from '@material-ui/core'
-import { Email, Phone} from '@material-ui/icons';
+import { withStyles, WithStyles, Avatar, Icon, Grid, Container, Typography, Divider } from '@material-ui/core'
+import { Email, Phone } from '@material-ui/icons';
 
 
 
@@ -48,10 +48,16 @@ class User extends Component<IAppProps, IAppState> {
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
                                     <div className={cn(marginTop, textLeft)}>
-                                    <Typography variant="h3">{selectedRobot.name}</Typography>
-                                    <Divider />
-                                    <Typography variant="h5"><Email /> {selectedRobot.email}</Typography>
-                                    <Typography variant="h5"><Phone />{selectedRobot.phone}</Typography>
+                                        <Typography variant="h3">{selectedRobot.name}</Typography>
+                                        <Divider />
+                                        <Typography variant="h6"><Email /> {selectedRobot.email}</Typography>
+                                        <Typography variant="h6"><Phone />{selectedRobot.phone}</Typography>
+                                    </div>
+                                    <div className={cn(marginTop, textLeft)}>
+                                        <Typography variant="h5">Address:</Typography>
+                                        <Divider />
+                                        <Typography variant="h6"> {selectedRobot.address.street}{','} {selectedRobot.address.suite}</Typography>
+                                        <Typography variant="h6">{selectedRobot.address.city}{'-'}{selectedRobot.address.zipcode}</Typography>
                                     </div>
                                 </Grid>
                             </Grid>
