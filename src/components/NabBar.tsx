@@ -19,10 +19,10 @@ class NavBar extends Component<IAppProps, IAppState> {
     render() {
         return (
             <nav>
-                <Link to='/'>
+                <Link to='/' className='no-link'>
                     <h1 className='f1'>Find Friends</h1>
                 </Link>
-                <SearchBox searchChange={this.onSearchChange} />
+                <SearchBox searchChange={this.onSearchChange}/>
             </nav>
         )
     }
