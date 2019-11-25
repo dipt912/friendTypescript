@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Demo link
+Open [http://dipt912.github.io/friendTypescript](http://dipt912.github.io/friendTypescript) to view it in the browser.
 
 ## Available Scripts
 
