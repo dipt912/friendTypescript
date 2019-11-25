@@ -29,8 +29,8 @@ class App extends Component<IAppProps, IAppState> {
     this.props.onFetchUser()
   }
 
-  onSearchChange = (event: any) => {
-    this.props.onSearchChange(event.target.value)
+  onSearchChange = (val: string) => {
+    this.props.onSearchChange(val)
   }
 
   render() {
