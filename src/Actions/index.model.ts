@@ -5,7 +5,8 @@ export enum ActionTypes {
     FETCH_USER_PENDING = 'FETCH_USER_PENDING',
     FETCH_USER_ERROR = 'FETCH_USER_ERROR',
     FETCH_USER_SUCCESS = 'FETCH_USER_SUCCESS',
-    FETCH_USER_RESULT ='FETCH_USER_RESULT'
+    FETCH_USER_RESULT ='FETCH_USER_RESULT',
+    SELECTED_USER= 'SELECTED_USER'
 
 }
 
@@ -35,10 +36,17 @@ export interface FetchUsersError {
     type: ActionTypes.FETCH_USER_ERROR,
 }
 
+
+export interface SelectedUser {
+    type: ActionTypes.SELECTED_USER,
+    id:number
+}
+
 export type Actions =
     SetSearchField
     | FetchUsers
     | FetchUserResult
     | FetchUsersSuccess
     | FetchUsersPending
-    | FetchUsersError;
+    | FetchUsersError
+    | SelectedUser;

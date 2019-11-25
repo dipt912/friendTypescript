@@ -1,13 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
-interface CardProps  {
+interface CardProps {
   name: string,
   email: string,
   id: number
 }
 
 const Card: React.SFC<CardProps> = ({ name, email, id }) => {
+  const path = `/user/${id}`
   return (
+    <Link to={path}>
     <div className='tc grow bg-light-green br3 pa3 ma2 dib bw2 shadow-5'>
       <img alt='robots' src={`https://robohash.org/${id}?size=200x200`} />
       <div>
@@ -15,6 +18,7 @@ const Card: React.SFC<CardProps> = ({ name, email, id }) => {
         <p>{email}</p>
       </div>
     </div>
+    </Link>
   );
 }
 

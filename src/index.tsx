@@ -7,9 +7,7 @@ import App from './container/App/index';
 import * as serviceWorker from './serviceWorker';
 import 'tachyons';
 import store from './store'
-import { fetchUsers } from './Actions/actions';
 
-store.dispatch(fetchUsers())
 ReactDOM.render(
     <Provider store={store}>
         <App/>

@@ -8,12 +8,16 @@ export interface IRequestUserIntiState {
     robots : Robot[] ,
     isPending: boolean,
     error : string,
+    selectedId: string,
+    selectedUser: Robot | null,
   }
 
 const intialStage: IRequestUserIntiState | {} = {
     robots : [],
     isPending: false,
     error : '',
+    selectedId:'',
+    selectedUser:null
 }
 
 
@@ -29,6 +33,8 @@ export const requestUsers = (state = intialStage , action: Actions ) => {
             return { ...state, isPending: false, error: 'Failed To fetch users' }
         case ActionTypes.FETCH_USER_PENDING:
             return { ...state, isPending: true };
+        case ActionTypes.SELECTED_USER:
+            return { ...state, selectedId: action.id };
         default:
             return state;
     }

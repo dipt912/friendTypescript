@@ -13,7 +13,8 @@ import {
     FetchUserResult,
     FetchUsersSuccess,
     FetchUsersPending,
-    FetchUsersError
+    FetchUsersError,
+    SelectedUser
 } from './index.model'
 
 
@@ -41,6 +42,11 @@ export const fetchUsersPending = (): FetchUsersPending => ({
 
 export const fetchUsersError = (): FetchUsersError => ({
     type: ActionTypes.FETCH_USER_ERROR,
+})
+
+export const selectUser = (id:number): SelectedUser => ({
+    type: ActionTypes.SELECTED_USER,
+    id
 })
 
 
