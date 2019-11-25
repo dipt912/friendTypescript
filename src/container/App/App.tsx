@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom'
-import { Router } from "react-router";
+import { Router, Redirect } from "react-router";
 // import { ConnectedRouter } from 'connected-react-router'
 
 import history from '../../lib/history';
@@ -39,8 +39,11 @@ class App extends Component<IAppProps, IAppState> {
         <Router history={history}>
           <NavBar onSearchChange={this.onSearchChange} />
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/friendTypescript" component={Home} />
             <Route exact path="/user/:id" component={User} />
+          </Switch>
+          <Switch>
+            <Redirect exact from="/" to="friendTypescript" />
           </Switch>
         </Router>
       </div>
