@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/friendTypescript/static/css/main.4645732f.chunk.css",
-    "main.js": "/friendTypescript/static/js/main.5881dc12.chunk.js",
-    "main.js.map": "/friendTypescript/static/js/main.5881dc12.chunk.js.map",
+    "main.js": "/friendTypescript/static/js/main.4714ab4e.chunk.js",
+    "main.js.map": "/friendTypescript/static/js/main.4714ab4e.chunk.js.map",
     "runtime-main.js": "/friendTypescript/static/js/runtime-main.0e97d8b8.js",
     "runtime-main.js.map": "/friendTypescript/static/js/runtime-main.0e97d8b8.js.map",
     "static/css/2.eb45ad44.chunk.css": "/friendTypescript/static/css/2.eb45ad44.chunk.css",
-    "static/js/2.d535ebb6.chunk.js": "/friendTypescript/static/js/2.d535ebb6.chunk.js",
-    "static/js/2.d535ebb6.chunk.js.map": "/friendTypescript/static/js/2.d535ebb6.chunk.js.map",
+    "static/js/2.c31b11ed.chunk.js": "/friendTypescript/static/js/2.c31b11ed.chunk.js",
+    "static/js/2.c31b11ed.chunk.js.map": "/friendTypescript/static/js/2.c31b11ed.chunk.js.map",
     "index.html": "/friendTypescript/index.html",
-    "precache-manifest.4714369e4a25619f10a6d8d695326b5c.js": "/friendTypescript/precache-manifest.4714369e4a25619f10a6d8d695326b5c.js",
+    "precache-manifest.e1ee0cb2a195883b36b35c4e96355088.js": "/friendTypescript/precache-manifest.e1ee0cb2a195883b36b35c4e96355088.js",
     "service-worker.js": "/friendTypescript/service-worker.js",
     "static/css/2.eb45ad44.chunk.css.map": "/friendTypescript/static/css/2.eb45ad44.chunk.css.map",
     "static/css/main.4645732f.chunk.css.map": "/friendTypescript/static/css/main.4645732f.chunk.css.map",
@@ -18,8 +18,8 @@
   "entrypoints": [
     "static/js/runtime-main.0e97d8b8.js",
     "static/css/2.eb45ad44.chunk.css",
-    "static/js/2.d535ebb6.chunk.js",
+    "static/js/2.c31b11ed.chunk.js",
     "static/css/main.4645732f.chunk.css",
-    "static/js/main.5881dc12.chunk.js"
+    "static/js/main.4714ab4e.chunk.js"
   ]
 }
