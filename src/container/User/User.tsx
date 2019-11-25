@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import cn from 'classnames'
 import { match } from 'react-router';
 import { Robot } from '../../Interfaces';
-import Card from '../../components/Card';
+import styles from './style'
+import { withStyles, WithStyles, Avatar,  Icon, Grid, Container, Typography, Divider } from '@material-ui/core'
+import { Email, Phone} from '@material-ui/icons';
 
 
-interface IAppProps {
+
+interface IAppProps extends WithStyles<typeof styles> {
     match: match<{ id: string }>
     users: Robot[],
     fetchUsers: () => void
@@ -29,15 +33,33 @@ class User extends Component<IAppProps, IAppState> {
     }
     render() {
         const { selectedRobot } = this.state
+        const { userDetailContainer, root, marginTop, userAvatar, textLeft } = this.props.classes
         return (
-            <div>
+            <div className={root}>
                 {selectedRobot
-                    && (<Card id={selectedRobot.id}
-                        name={selectedRobot.name}
-                        email={selectedRobot.email} />)}
+                    && (
+                        <Container fixed>
+                            <Grid container spacing={3}>
+                                <Grid item xs={12} sm={6}>
+                                    <div className={cn()}>
+                                        {/* <img alt='robots' src={`https://robohash.org/${selectedRobot.id}?size=200x200`} /> */}
+                                        <Avatar alt="Remy Sharp" src={`https://robohash.org/${selectedRobot.id}?size=200x200`} className={userAvatar} />
+                                    </div>
+                                </Grid>
+                                <Grid item xs={12} sm={6}>
+                                    <div className={cn(marginTop, textLeft)}>
+                                    <Typography variant="h3">{selectedRobot.name}</Typography>
+                                    <Divider />
+                                    <Typography variant="h5"><Email /> {selectedRobot.email}</Typography>
+                                    <Typography variant="h5"><Phone />{selectedRobot.phone}</Typography>
+                                    </div>
+                                </Grid>
+                            </Grid>
+                        </Container>
+                    )}
             </div>
         )
     }
 }
 
-export default User;
+export default withStyles(styles)(User);
