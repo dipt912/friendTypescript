@@ -41,7 +41,7 @@
   "scripts": {
     "bundle": "webpack",
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "react-scripts build",
+    "build": "webpack --mode production",
     "check-types": "tsc",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
