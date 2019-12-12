@@ -38,8 +38,10 @@
     "typescript": "3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "bundle": "webpack",
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production",
+    "check-types": "tsc",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
@@ -61,7 +63,22 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "@babel/preset-typescript": "^7.7.4",
+    "@babel/runtime": "^7.7.6",
     "@types/query-string": "^6.3.0",
-    "gh-pages": "^2.1.1"
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.3.0",
+    "gh-pages": "^2.1.1",
+    "style-loader": "^1.0.1",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   }
 }

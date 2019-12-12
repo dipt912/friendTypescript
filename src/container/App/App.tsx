@@ -41,6 +41,7 @@ class App extends Component<IAppProps, IAppState> {
           <Switch>
             <Route exact path="/friendTypescript" component={Home} />
             <Route exact path="/user/:id" component={User} />
+            <Route exact path="/" component={Home} />
           </Switch>
           <Switch>
             <Redirect exact from="/" to="friendTypescript" />
