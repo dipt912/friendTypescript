@@ -3,7 +3,7 @@ import cn from 'classnames'
 import { match } from 'react-router';
 import { Robot } from '../../Interfaces';
 import styles from './style'
-import { withStyles, WithStyles, Avatar,  Icon, Grid, Container, Typography, Divider } from '@material-ui/core'
+import { withStyles, WithStyles, Avatar, Grid, Container, Typography, Divider } from '@material-ui/core'
 import { Email, Phone} from '@material-ui/icons';
 
 
@@ -33,7 +33,7 @@ class User extends Component<IAppProps, IAppState> {
     }
     render() {
         const { selectedRobot } = this.state
-        const { userDetailContainer, root, marginTop, userAvatar, textLeft } = this.props.classes
+        const {  root, marginTop, userAvatar, textLeft } = this.props.classes
         return (
             <div className={root}>
                 {selectedRobot
