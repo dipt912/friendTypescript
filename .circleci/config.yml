@@ -2,13 +2,14 @@ version: 2
 
 jobs:
   build:
-    - image: circle/node:8.9
-  steps:
-    - checkout
-    - run: echo "npm installig"
-    - run: npm install
-    - run: CI=true npm run build
-    - run: npm run deploy
+    docker: 
+      - image: circle/node:8.9
+    steps:
+      - checkout
+      - run: echo "npm installig"
+      - run: npm install
+      - run: CI=true npm run build
+      - run: npm run deploy
 workflows:
   version: 2
   buildrepo:
