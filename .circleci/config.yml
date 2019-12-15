@@ -9,7 +9,6 @@ jobs:
       - run: echo "npm installig"
       - run: npm install
       - run: CI=true npm run build
-      - run: npm run deploy
 workflows:
   version: 2
   buildrepo:
